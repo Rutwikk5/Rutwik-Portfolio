@@ -5,102 +5,179 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rutwik Dakhore | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles.css">
-    <meta name="format-detection" content="telephone=no, date=no, address=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <!-- Typed.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 
 </head>
 <body>
     <div class="container">
+        <div class="scroll-progress"></div>
         <!-- Header Section -->
         <div class="header">
             <div>
-                <h1>Rutwik Dakhore</h1>
-                <p class="tagline">Software Engineer | Data Science Enthusiast</p>
+                <h1 id="typing-name"></h1>
+                <p class="tagline"><span id="typing-role"></span></p>
             </div>
             <div class="social-links">
-                <a href="https://github.com/Rutwikk5" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/rutwik-dakhore-359114169/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Rutwikk5" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/rutwik-dakhore-359114169/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="projects.html" class="projects-btn">🚀 Projects</a>
             </div>
         </div>
 
         <div class="section about">
-            <h2>About Me</h2>
-            <p>Proficient in Python, C, C++, and SQL, with a strong foundation in data science techniques. Skilled in software development and data analysis, combining technical expertise with analytical problem-solving.</p>
+            <h2>📌 About Me</h2>
+            <p>Software Engineer and Data Science enthusiast with hands-on experience in machine learning, data analysis, and DevOps automation. Passionate about building scalable solutions, optimizing workflows, and leveraging AI/ML for business insights.</p>
         </div>
         
         <div class="section experience">
-            <h2>Work Experience</h2>
+            <h2>💼 Work Experience</h2>
             <p><strong>Software Engineering Associate</strong> - AMDOCS (10/2021 - 05/2022)</p>
             <ul>
-                <li>Developed a Jenkins pipeline for project cloning from GIT to local machines.</li>
-                <li>Assisted in integrating non-production config maps with production config maps, optimizing configuration management in an internal project.</li>
-                <li>Developed a Jenkins job to securely encrypt passwords in log outputs across multiple Jenkins jobs, enhancing security and compliance.</li>
+                <li>⚙️ Designed and automated CI/CD pipelines using Jenkins, reducing deployment time by 40% and minimizing manual errors.</li>
+                <li>📡 Developed REST APIs for internal applications, improving system integration and data exchange.</li>
+                <li>🛠️ Assisted in integrating non-production config maps with production config maps, optimizing configuration management.</li>
+                <li>🔐 Developed a Jenkins job to securely encrypt passwords in log outputs, enhancing security and compliance.</li>
+                <li>🤝 Collaborated with cross-functional teams to troubleshoot production issues and ensure system stability.</li>
             </ul>
         </div>
 
-         
         <div class="section projects">
-            <h2>Projects</h2>
+            <h2>🚀 Projects</h2>
+            <a href="projects.html" class="projects-btn">View More About Projects</a>
             <ul>
-                <li>IoT-Based Patient Monitoring System for Healthcare (09/2020 - 02/2021)</li>
-                <li>Exploratory Data Analysis of Hotel Booking Trends (08/2022 - 09/2022) <a href="https://github.com/Rutwikk5/EDA_Capstone_Project_Almabetter" target="_blank">[Link]</a></li>
-                <li>Predicting Mobile Price Ranges with Machine Learning Models (10/2022 - 12/2023) <a href="https://github.com/Rutwikk5/classification_project_almabetter" target="_blank">[Link]</a></li>
-                <li>Bike Sharing Demand Forecasting Using Machine Learning (01/2023 - 03/2023) <a href="https://github.com/Rutwikk5/regression_capstone_project" target="_blank">[Link]</a></li>
-                <li>Customer Segmentation for Online Retail Using Machine Learning (03/2023 - 05/2023) <a href="https://github.com/Rutwikk5/unsupervised_ml_capstone_project" target="_blank">[Link]</a></li>
+                <li>🏥 IoT-Based Patient Monitoring System for Healthcare (09/2020 - 02/2021)</li>
+                <li>📊 Exploratory Data Analysis of Hotel Booking Trends (08/2022 - 09/2022)</li>
+                <li>📱 Predicting Mobile Price Ranges with Machine Learning Models (10/2022 - 12/2023)</li>
+                <li>🚲 Bike Sharing Demand Forecasting Using Machine Learning (01/2023 - 03/2023)</li>
+                <li>🛒 Customer Segmentation for Online Retail Using Machine Learning (03/2023 - 05/2023)</li>
             </ul>
         </div>
 
         <div class="section courses">
-            <h2>Courses</h2>
-            <p><strong>Data Science Certification </strong> - Almabetter (06/2022 - 06/2023) </p>
+            <h2>📚 Courses</h2>
+            <p><strong>Data Science Certification</strong> - Almabetter (06/2022 - 06/2023) 
+                <a href="Data_Science_Certificate.pdf" target="_blank" class="view-cert">[📜 View Certification]</a>
+            </p>
             <ul>
-                <li>Hands-on Experience – Worked on real-world datasets, implementing machine learning and deep learning models to solve industry-relevant problems.</li>
-                <li>Tools & Technologies – Gained expertise in Python, SQL, TensorFlow, PyTorch, NumPy, Pandas, and Scikit-Learn for data analysis and model building.</li>
-                <li>Model Optimization – Focused on improving model accuracy through hyperparameter tuning, feature engineering, and data preprocessing techniques. </li>
-                <li>Data Visualization – Utilized Seaborn, Matplotlib, and Plotly for interactive data visualization and exploration.</li>
-                <li>Collaboration & Agile Practices – Worked in teams following Agile methodologies, version control (Git/GitHub), and model deployment strategies. </li>
-                <li>End-to-End Projects – Built full-fledged data science solutions, covering data cleaning, exploratory data analysis (EDA), model deployment, and performance evaluation.</li>
-
+                <li>🛠️ <strong>Hands-on Experience</strong> – Worked on real-world datasets, implementing machine learning and deep learning models to solve industry-relevant problems.</li>
+                <li>🖥️ <strong>Tools & Technologies</strong> – Gained expertise in Python, SQL, TensorFlow, PyTorch, NumPy, Pandas, and Scikit-Learn for data analysis and model building.</li>
+                <li>⚙️ <strong>Model Optimization</strong> – Focused on improving model accuracy through hyperparameter tuning, feature engineering, and data preprocessing techniques.</li>
+                <li>📊 <strong>Data Visualization</strong> – Utilized Seaborn, Matplotlib, and Plotly for interactive data visualization and exploration.</li>
+                <li>🤝 <strong>Collaboration & Agile Practices</strong> – Worked in teams following Agile methodologies, version control (Git/GitHub), and model deployment strategies.</li>
+                <li>🚀 <strong>End-to-End Projects</strong> – Built full-fledged data science solutions, covering data cleaning, exploratory data analysis (EDA), model deployment, and performance evaluation.</li>
             </ul>
         </div>
+        
 
         <div class="section certifications">
-            <h2>Certifications</h2>
+            <h2>🎓 Certifications</h2>
             <p><strong> Java (Core & Advanced)</strong> - (11/2021 - 03/2022) </p>
             <p><strong> Python </strong> - (11/2019 - 01/2020)</p>
             <p><strong> SQL </strong> - (11/2019 - 02/2022)</p>
             <p><strong> Dot Net </strong> - (11/2020 - 04/2021)</p>
             <p><strong> C, C++ </strong> - (07/2019 - 09/2019)</p>        
         </div>
-        
-        <div class="section education">
-            <h2>Education</h2>
-            <p><strong>BE in Electronics & Telecommunication</strong> - D.M.I.E.T.R, Wardha</p>
-            <ul>
-                <li>Graduated in 2021 with a strong 9.7 CGPA.</li>
-                <li>Completed a final year project on IoT-based Automation System.</li>
-            </ul>
-        </div>
-       
-
         <div class="section skills">
-            <h2>Skills</h2>
-            <div class="skills-list">
-                <div class="skill">Decision Making</div>
-                <div class="skill">Multi-tasking</div>
-                <div class="skill">Team Management</div>
-                <div class="skill">Public Speaking</div>
-                <div class="skill">Attention to Detail</div>
+            <h2>🚀 Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>💻 Programming Languages</h3>
+                    <p>Python, Java, C, C++, SQL, Bash</p>
+                </div>
+                <div class="skill-category">
+                    <h3>🛠 Development Tools</h3>
+                    <p>Git, Jenkins, Docker, Kubernetes, Terraform</p>
+                </div>
+                <div class="skill-category">
+                    <h3>📌 Software Development</h3>
+                    <p>REST APIs, Microservices, System Design, Object-Oriented Programming (OOP), Test-Driven Development (TDD), Agile & Scrum</p>
+                </div>
+                <div class="skill-category">
+                    <h3>📊 Data Science & Analysis</h3>
+                    <p>Machine Learning (Scikit-Learn, TensorFlow, PyTorch), Data Visualization (Matplotlib, Seaborn, Plotly), Data Wrangling (Pandas, NumPy), Big Data (Spark, Hadoop), SQL & NoSQL Analytics</p>
+                </div>
+                <div class="skill-category">
+                    <h3>☁️ Cloud & DevOps</h3>
+                    <p>AWS (EC2, S3, Lambda, RDS), Google Cloud Platform (GCP), CI/CD Pipelines, Terraform, Helm</p>
+                </div>
+                <div class="skill-category">
+                    <h3>🔒 Security & Performance</h3>
+                    <p>OAuth, JWT Authentication, Secure Logging, Load Balancing, Performance Optimization</p>
+                </div>
+                <div class="skill-category">
+                    <h3>🗄 Databases</h3>
+                    <p>MySQL, PostgreSQL, MongoDB, Redis</p>
+                </div>
             </div>
         </div>
-        
-        <div class="section contact">
-            <h2>Contact Me</h2>
-            <p>Get in touch: <a href="mailto:rutwikdakhore5@gmail.com">rutwikdakhore5@gmail.com</a></p>
-            <p>My Resume: <a href="Rutwik_Resume.pdf" download="Rutwik_Dakhore_Resume.pdf" class="resume-btn">Download My Resume</a></p>
-            <p>Feel free to reach out to me for any queries or opportunities.</p>
+        <div class="section education">
+            <h2>🎓 Education</h2>
+            <p><strong>BE in Electronics & Telecommunication</strong> - D.M.I.E.T.R, Wardha</p>
+            <ul>
+                <li>📈 Graduated in 2021 with a strong 9.7 CGPA.</li>
+                <li>💡 Completed a final year project on IoT-based Automation System.</li>
+            </ul>
         </div>
+        <div class="section contact">
+            <h2>📩 Contact Me</h2>
+            <p>📧 Get in touch: <a href="mailto:rutwikdakhore5@gmail.com" class="email-link">rutwikdakhore5@gmail.com</a></p>
+            <p>📄 My Resume: <a href="Rutwik_Resume.pdf" download="Rutwik_Dakhore_Resume.pdf" class="resume-link">Download My Resume</a></p>
+            <p>📱 Connect Directly With Me on WhatsApp <span id="whatsapp"></span></p>
+            <p>🤝 Feel free to reach out to me for any queries or opportunities.</p>
+        </div>
+        
+        <script>
+            // Obfuscate WhatsApp Number to avoid bots
+            let part1 = "7248";
+            let part2 = "9380";
+            let part3 = "60";
+            document.getElementById("whatsapp").innerHTML = `<a href="https://wa.me/91${part1}${part2}${part3}" target="_blank" class="whatsapp-link">Click Here</a>`;
+        </script>
+        
+        
     </div>
+    <script>
+        var typedName = new Typed("#typing-name", {
+            strings: ["Rutwik Dakhore"], // Your name
+            typeSpeed: 100,
+            showCursor: false
+        });
+
+        var typedRole = new Typed("#typing-role", {
+            strings: ["Software Engineer", "Data Science Enthusiast"],
+            typeSpeed: 80,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+    <script>
+        ScrollReveal().reveal('.section', {
+            distance: '50px',
+            duration: 800,
+            easing: 'ease-in-out',
+            origin: 'bottom',
+            reset: false
+        });
+    </script>
+    <script>
+    window.onscroll = function () {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrollPercentage = (scrollTop / scrollHeight) * 100;
+        document.querySelector(".scroll-progress").style.height = scrollPercentage + "%";
+    };
+    </script>
+
+    
 </body>
 </html>

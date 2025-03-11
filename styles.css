@@ -10,7 +10,9 @@ body {
     padding: 20px; 
     line-height: 1.7;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 /* Container */
 .container { 
     width: 85%; 
@@ -18,6 +20,18 @@ body {
     margin: auto; 
     padding: 20px;
 }
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    right: 0; /* Aligns it with the right edge (where scrollbar is) */
+    width: 7px; /* Adjust width as needed */
+    height: 0%; /* Starts with 0% height */
+    background: #7678b7; /* Color of the progress bar */
+    z-index: 9999;
+    transition: height 0.2s ease-out;
+    border-radius: 10px; /* Adds smooth edges */
+}
+
 
 /* Header Section */
 .header {
@@ -29,6 +43,23 @@ body {
     padding-bottom: 10px;
     border-bottom: 1px solid #333;
 }
+
+/* Contact Button */
+.contact-btn {
+    background-color: #444;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #5a5c99;
+}
+
 
 h1 { 
     margin: 0; 
@@ -42,6 +73,23 @@ h2 {
     border-left: 5px solid #ffffff;
     padding-left: 12px;
 }
+/* Subtitle Styling */
+.subtitle {
+    margin-top: 5px;
+    font-size: 1.2em;
+    color: #bbb;
+}
+.back-btn {
+    color: #7678b7; /* Sets text color */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold; /* Optional: Makes it bold */
+}
+
+.back-btn:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+
 
 .tagline { 
     font-size: 1.2em; 
@@ -58,7 +106,7 @@ h2 {
 .social-links a {
     font-weight: bold;
     font-size: 1.1em;
-    color: #ffffff;
+    color: #7678b7;
     text-decoration: none;
     transition: color 0.3s, transform 0.2s;
 }
@@ -97,52 +145,126 @@ h2 {
 .projects a:hover {
     color: #888;  /* Slightly darker grey on hover */
 }
+/* Style social icons */
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px; /* Space between icon and text */
+    text-decoration: none;
+    color: #9a9caf;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
 
-/* Skills Section */
-.skills-list {
+.social-links a i {
+    font-size: 18px; /* Adjust icon size */
+}
+
+/* Hover effect */
+.social-links a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff !important;
+}
+
+
+
+.skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 12px;
-    margin-top: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px;
+    background: #171728; /* Dark background for contrast */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out; /* Smooth fade-in animation */
 }
 
-.skill {
-    background-color: #2a2a2a;
-    padding: 12px;
-    text-align: center;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
+.skill-category {
+    background: #252541;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
 }
+
+.skill-category:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+h2 {
+    text-align:left;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #bbb;
+    animation: slideIn 1s ease-in-out;
+}
+
+h3 {
+    color: #f8f9fa;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #dcdcdc;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
 
 .skill:hover {
     background: #444;
     transform: scale(1.05);
 }
+.email-link {
+    color: #7678b7; /* Sets text color */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold; /* Optional: Makes it bold */
+}
+
+.email-link:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
 
 /* Resume Button */
-.resume-btn {
-    display: inline-block;
-    padding: 7px 12px;  /* Reduced padding for a smaller size */
-    font-size: 0.9em;   /* Smaller text to match the minimalist look */
-    background-color: #ffffff;
-    color: #121212;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 4px; /* Slightly rounded corners */
-    transition: background 0.3s, color 0.3s, transform 0.2s;
+.resume-link {
+    text-decoration: none; /* Removes underline */
+    color: #7678bf; /* Change color as needed */
+    font-weight: bold; /* Makes text bold */
 }
 
-.resume-btn:hover {
-    background-color: #999;
-    color: #ffffff;
-    transform: scale(1.03); /* Subtle hover effect */
+.resume-link:hover {
+    text-decoration: underline; /* Adds underline on hover */
 }
+
 
 
 /* Contact Section */
 .contact p {
     font-size: 1.1em;
+}
+
+.whatsapp-link {
+    color: #7678b7; /* Sets the color */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold;
+}
+
+.whatsapp-link:hover {
+    text-decoration: underline; /* Adds underline on hover */
 }
 
 /* Responsive Design */
@@ -158,5 +280,38 @@ h2 {
 
     .skills-list {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+.certification {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-cert {
+    text-decoration: none;  /* Removes underline */
+    color: #7678bf; /* Change color as needed */
+}
+
+.header {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align text to the left */
+    gap: 15px; /* Adds some spacing between elements */
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact-dropdown {
+        right: auto;
+        left: 10px;
     }
 }
