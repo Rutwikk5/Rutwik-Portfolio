@@ -13,6 +13,10 @@ body {
 html {
     scroll-behavior: smooth;
 }
+/* Prevent iOS from auto-linking dates */
+meta[name="format-detection"] {
+    content: "telephone=no, date=no, address=no, email=no";
+}
 /* Container */
 .container { 
     width: 85%; 
