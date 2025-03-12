@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
     <title>Rutwik Dakhore | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -18,22 +17,25 @@
 <body>
     <div class="container">
         <div class="scroll-progress"></div>
-        <!-- Header Section -->
-        <div class="header">
-            <div>
+
+        <div class="header full-screen">
+            <div class="header-content">
+                <img src="profile.PNG" alt="Rutwik Dakhore" class="profile-img">
                 <h1 id="typing-name"></h1>
                 <p class="tagline"><span id="typing-role"></span></p>
+                <p class="location">📍 Nagpur, India</p>
+                <div class="social-links">
+                    <a href="https://github.com/Rutwikk5" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/rutwik-dakhore-359114169/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="projects.html" class="projects-btn">🚀 Projects</a>
+                    <a href="Rutwik_Resume.pdf" target="_blank" class="resume-link">📄 Resume</a>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="https://github.com/Rutwikk5" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/rutwik-dakhore-359114169/" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="projects.html" class="projects-btn">🚀 Projects</a>
+            <div class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
             </div>
         </div>
+        
 
         <div class="section about">
             <h2>📌 About Me</h2>
@@ -62,31 +64,6 @@
                 <li>🚲 Bike Sharing Demand Forecasting Using Machine Learning (01/2023 - 03/2023)</li>
                 <li>🛒 Customer Segmentation for Online Retail Using Machine Learning (03/2023 - 05/2023)</li>
             </ul>
-        </div>
-
-        <div class="section courses">
-            <h2>📚 Courses</h2>
-            <p><strong>Data Science Certification</strong> - Almabetter (06/2022 - 06/2023) 
-                <a href="Data_Science_Certificate.pdf" target="_blank" class="view-cert">[📜 View Certification]</a>
-            </p>
-            <ul>
-                <li>🛠️ <strong>Hands-on Experience</strong> – Worked on real-world datasets, implementing machine learning and deep learning models to solve industry-relevant problems.</li>
-                <li>🖥️ <strong>Tools & Technologies</strong> – Gained expertise in Python, SQL, TensorFlow, PyTorch, NumPy, Pandas, and Scikit-Learn for data analysis and model building.</li>
-                <li>⚙️ <strong>Model Optimization</strong> – Focused on improving model accuracy through hyperparameter tuning, feature engineering, and data preprocessing techniques.</li>
-                <li>📊 <strong>Data Visualization</strong> – Utilized Seaborn, Matplotlib, and Plotly for interactive data visualization and exploration.</li>
-                <li>🤝 <strong>Collaboration & Agile Practices</strong> – Worked in teams following Agile methodologies, version control (Git/GitHub), and model deployment strategies.</li>
-                <li>🚀 <strong>End-to-End Projects</strong> – Built full-fledged data science solutions, covering data cleaning, exploratory data analysis (EDA), model deployment, and performance evaluation.</li>
-            </ul>
-        </div>
-        
-
-        <div class="section certifications">
-            <h2>🎓 Certifications</h2>
-            <p><strong> Java (Core & Advanced)</strong> - (11/2021 - 03/2022) </p>
-            <p><strong> Python </strong> - (11/2019 - 01/2020)</p>
-            <p><strong> SQL </strong> - (11/2019 - 02/2022)</p>
-            <p><strong> Dot Net </strong> - (11/2020 - 04/2021)</p>
-            <p><strong> C, C++ </strong> - (07/2019 - 09/2019)</p>        
         </div>
         <div class="section skills">
             <h2>🚀 Skills</h2>
@@ -121,6 +98,30 @@
                 </div>
             </div>
         </div>
+        <div class="section courses">
+            <h2>📚 Courses</h2>
+            <p><strong>Data Science Certification</strong> - Almabetter (06/2022 - 06/2023) 
+                <a href="Data_Science_Certificate.pdf" target="_blank" class="view-cert">[View Certification 📜 ]</a>
+            </p>
+            <ul>
+                <li>🛠️ <strong>Hands-on Experience</strong> – Worked on real-world datasets, implementing machine learning and deep learning models to solve industry-relevant problems.</li>
+                <li>🖥️ <strong>Tools & Technologies</strong> – Gained expertise in Python, SQL, TensorFlow, PyTorch, NumPy, Pandas, and Scikit-Learn for data analysis and model building.</li>
+                <li>⚙️ <strong>Model Optimization</strong> – Focused on improving model accuracy through hyperparameter tuning, feature engineering, and data preprocessing techniques.</li>
+                <li>📊 <strong>Data Visualization</strong> – Utilized Seaborn, Matplotlib, and Plotly for interactive data visualization and exploration.</li>
+                <li>🤝 <strong>Collaboration & Agile Practices</strong> – Worked in teams following Agile methodologies, version control (Git/GitHub), and model deployment strategies.</li>
+                <li>🚀 <strong>End-to-End Projects</strong> – Built full-fledged data science solutions, covering data cleaning, exploratory data analysis (EDA), model deployment, and performance evaluation.</li>
+            </ul>
+        </div>
+    
+        <div class="section certifications">
+            <h2>🎓 Certifications</h2>
+            <p><strong> Java (Core & Advanced)</strong> - (11/2021 - 03/2022) </p>
+            <p><strong> Python </strong> - (11/2019 - 01/2020)</p>
+            <p><strong> SQL </strong> - (11/2019 - 02/2022)</p>
+            <p><strong> Dot Net </strong> - (11/2020 - 04/2021)</p>
+            <p><strong> C, C++ </strong> - (07/2019 - 09/2019)</p>        
+        </div>
+      
         <div class="section education">
             <h2>🎓 Education</h2>
             <p><strong>BE in Electronics & Telecommunication</strong> - D.M.I.E.T.R, Wardha</p>
@@ -131,21 +132,17 @@
         </div>
         <div class="section contact">
             <h2>📩 Contact Me</h2>
-            <p>📧 Get in touch: <a href="mailto:rutwikdakhore5@gmail.com" class="email-link">rutwikdakhore5@gmail.com</a></p>
+            <p>📧 Get in touch:  
+                <span class="email-link" onclick="copyEmail()" title="Click to copy">rutwikdakhore5@gmail.com</span>  
+                <span id="copy-message" class="copy-message">✔ Copied!</span>
+            </p>
+            <p>📞 Connect Directly With Me on Call:  
+                <span class="phone-link" onclick="copyPhoneNumber()">+91 7248938060</span>  
+                <span id="phone-message" class="copy-message">✔ Copied!</span>
+            </p>
             <p>📄 My Resume: <a href="Rutwik_Resume.pdf" download="Rutwik_Dakhore_Resume.pdf" class="resume-link">Download My Resume</a></p>
-            <p>📱 Connect Directly With Me on WhatsApp <span id="whatsapp"></span></p>
             <p>🤝 Feel free to reach out to me for any queries or opportunities.</p>
-        </div>
-        
-        <script>
-            // Obfuscate WhatsApp Number to avoid bots
-            let part1 = "7248";
-            let part2 = "9380";
-            let part3 = "60";
-            document.getElementById("whatsapp").innerHTML = `<a href="https://wa.me/91${part1}${part2}${part3}" target="_blank" class="whatsapp-link">Click Here</a>`;
-        </script>
-        
-        
+        </div>   
     </div>
     <script>
         var typedName = new Typed("#typing-name", {
@@ -167,7 +164,7 @@
             duration: 800,
             easing: 'ease-in-out',
             origin: 'bottom',
-            reset: false
+            reset: true
         });
     </script>
     <script>
@@ -178,7 +175,78 @@
         document.querySelector(".scroll-progress").style.height = scrollPercentage + "%";
     };
     </script>
-
+    <script>
+        window.addEventListener("scroll", function () {
+            document.body.classList.add("scrolled");
+        });
     
+        document.querySelector(".scroll-down").addEventListener("click", function () {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: "smooth",
+            });
+        });
+    </script>
+    <script>
+        // Show button when scrolling down
+        window.onscroll = function () {
+            let btn = document.getElementById("backToTop");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }  
+    </script> 
+    <script>function copyEmail() {
+        // Create a temporary input element
+        var tempInput = document.createElement("input");
+        tempInput.value = "rutwikdakhore5@gmail.com";
+        document.body.appendChild(tempInput);
+        
+        // Select and copy the text
+        tempInput.select();
+        document.execCommand("copy");
+        
+        // Remove the input element
+        document.body.removeChild(tempInput);
+    
+        // Show confirmation message
+        var message = document.getElementById("copy-message");
+        message.style.display = "inline";
+        
+        // Hide the message after 1.5 seconds
+        setTimeout(() => {
+            message.style.display = "none";
+        }, 1500);
+    }
+    </script>
+    <script>function copyPhoneNumber() {
+        // Create a temporary input element
+        var tempInput = document.createElement("input");
+        tempInput.value = "+91 7248938060";  // Your phone number here
+        document.body.appendChild(tempInput);
+    
+        // Select and copy the number
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+    
+        // Show "✔ Copied!" confirmation
+        var message = document.getElementById("phone-message");
+        message.style.display = "inline";
+    
+        // Hide message after 1.5s
+        setTimeout(() => {
+            message.style.display = "none";
+        }, 1500);
+    }
+    </script>
+<button onclick="scrollToTop()" id="backToTop" title="Go to top">⬆️</button> 
 </body>
 </html>

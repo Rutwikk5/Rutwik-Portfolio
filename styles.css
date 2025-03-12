@@ -3,39 +3,38 @@
 
 /* General Styling */
 body { 
-    font-family: 'Inter', sans-serif;
-    background-color: #121212; 
-    color: #ffffff; 
+    font-family: 'Inter', sans-serif;  /* Sets font */
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
     margin: 0; 
     padding: 20px; 
-    line-height: 1.7;
+    line-height: 1.7; /* Improves readability */
 }
+
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
 }
-/* Prevent iOS from auto-linking dates */
-meta[name="format-detection"] {
-    content: "telephone=no, date=no, address=no, email=no";
-}
+
 /* Container */
 .container { 
     width: 85%; 
     max-width: 1100px;
-    margin: auto; 
+    margin: auto; /* Centers the content */
     padding: 20px;
 }
+
+/* Scroll Progress Bar */
 .scroll-progress {
     position: fixed;
     top: 0;
-    right: 0; /* Aligns it with the right edge (where scrollbar is) */
-    width: 7px; /* Adjust width as needed */
-    height: 0%; /* Starts with 0% height */
-    background: #7678b7; /* Color of the progress bar */
+    right: 0; /* Aligns with the right edge */
+    width: 7px;
+    height: 0%; /* Starts empty */
+    background: #7678b7; /* Progress bar color */
     z-index: 9999;
     transition: height 0.2s ease-out;
-    border-radius: 10px; /* Adds smooth edges */
+    border-radius: 10px; /* Smooth edges */
 }
-
 
 /* Header Section */
 .header {
@@ -45,7 +44,7 @@ meta[name="format-detection"] {
     flex-wrap: wrap;
     margin-bottom: 30px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #333; /* Adds a separator */
 }
 
 /* Contact Button */
@@ -64,7 +63,7 @@ meta[name="format-detection"] {
     background-color: #5a5c99;
 }
 
-
+/* Headings */
 h1 { 
     margin: 0; 
     font-size: 2.4em; 
@@ -77,24 +76,26 @@ h2 {
     border-left: 5px solid #ffffff;
     padding-left: 12px;
 }
+
 /* Subtitle Styling */
 .subtitle {
     margin-top: 5px;
     font-size: 1.2em;
     color: #bbb;
 }
+
+/* Back Button */
 .back-btn {
-    color: #7678b7; /* Sets text color */
+    color: #7678b7;
     text-decoration: none; /* Removes underline */
-    font-weight: bold; /* Optional: Makes it bold */
+    font-weight: bold;
 }
 
 .back-btn:hover {
-    text-decoration: underline; /* Adds underline on hover */
+    text-decoration: underline;
 }
 
-
-
+/* Tagline */
 .tagline { 
     font-size: 1.2em; 
     color: #bbb; 
@@ -124,12 +125,12 @@ h2 {
 .section { 
     margin-bottom: 50px; 
     padding: 25px; 
-    background-color: #1e1e1e; 
+    background-color: #1e1e1e; /* Dark background */
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
 }
 
-/* List Styling */
+/* Lists */
 .section ul {
     padding-left: 20px;
 }
@@ -138,22 +139,23 @@ h2 {
     margin-bottom: 8px;
 }
 
-/* Project Styling */
+/* Projects */
 .projects a {
-    color: #7678b7;  /* Lavender color */
-    text-decoration: none;  /* Remove underline */
+    color: #7678b7;
+    text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .projects a:hover {
-    color: #888;  /* Slightly darker grey on hover */
+    color: #888;
 }
-/* Style social icons */
+
+/* Social Links Styling */
 .social-links a {
     display: inline-flex;
     align-items: center;
-    gap: 6px; /* Space between icon and text */
+    gap: 6px;
     text-decoration: none;
     color: #9a9caf;
     font-weight: 600;
@@ -166,23 +168,21 @@ h2 {
     font-size: 18px; /* Adjust icon size */
 }
 
-/* Hover effect */
 .social-links a:hover {
     background: rgba(255, 255, 255, 0.1);
     color: #ffffff !important;
 }
 
-
-
+/* Skills Section */
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
     gap: 20px;
     padding: 20px;
-    background: #171728; /* Dark background for contrast */
+    background: #171728;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1s ease-in-out; /* Smooth fade-in animation */
+    animation: fadeIn 1s ease-in-out;
 }
 
 .skill-category {
@@ -193,9 +193,10 @@ h2 {
 }
 
 .skill-category:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
+    transform: translateY(-5px);
 }
 
+/* Headings */
 h2 {
     text-align:left;
     font-size: 28px;
@@ -227,48 +228,31 @@ p {
     to { transform: translateY(0); opacity: 1; }
 }
 
-
-.skill:hover {
-    background: #444;
-    transform: scale(1.05);
-}
-.email-link {
-    color: #7678b7; /* Sets text color */
-    text-decoration: none; /* Removes underline */
-    font-weight: bold; /* Optional: Makes it bold */
+/* Email & Resume Links */
+.email-link, .resume-link {
+    color: #7678b7;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.email-link:hover {
-    text-decoration: underline; /* Adds underline on hover */
+.email-link:hover, .resume-link:hover {
+    text-decoration: underline;
 }
-
-
-/* Resume Button */
-.resume-link {
-    text-decoration: none; /* Removes underline */
-    color: #7678bf; /* Change color as needed */
-    font-weight: bold; /* Makes text bold */
-}
-
-.resume-link:hover {
-    text-decoration: underline; /* Adds underline on hover */
-}
-
-
 
 /* Contact Section */
 .contact p {
     font-size: 1.1em;
 }
 
+/* WhatsApp Link */
 .whatsapp-link {
-    color: #7678b7; /* Sets the color */
-    text-decoration: none; /* Removes underline */
+    color: #7678b7;
+    text-decoration: none;
     font-weight: bold;
 }
 
 .whatsapp-link:hover {
-    text-decoration: underline; /* Adds underline on hover */
+    text-decoration: underline;
 }
 
 /* Responsive Design */
@@ -286,36 +270,158 @@ p {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 }
-.certification {
+
+/* Full-Screen Header */
+.full-screen {
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    background: #121212;
+    color: #fff;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Content Animation */
+.content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+body.scrolled .content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll-down Indicator */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+/* Profile Image */
+.profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px;
+    border: 3px solid #7678bf;
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#backToTop:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+/* Resume Link Styling */
+.resume-link {
+    font-weight: bold;
+    color: #7678bf; /* Adjust to match your theme */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.resume-link:hover {
+    color: #888; /* Slightly darker shade on hover */
+    text-decoration: none;
+}
+.email-link {
+    cursor: pointer;
+    position: relative;
+}
+
+/* Styling for email and phone number links */
+.email-link, .phone-link {
+    cursor: pointer;
+    color: #7678b7;  /* Matches theme */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+/* Hover effect for both email and phone */
+.email-link:hover, .phone-link:hover {
+    color: #bbb;  /* Changes color on hover */
+    text-decoration: none;  /* Removes underline */
+}
+
+/* Tooltip effect for email and phone */
+.email-link::after, .phone-link::after {
+    content: "Click to copy";
+    position: absolute;
+    background-color: #444;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+/* Show tooltip on hover */
+.email-link:hover::after, .phone-link:hover::after {
+    opacity: 1;
+}
+
+/* Copied confirmation message */
+.copy-message {
+    font-size: 14px;
+    color: #7678b7;
+    display: none;
+    margin-left: 5px;
 }
 
 .view-cert {
+    color: #7678b7;  /* Sets the text color */
     text-decoration: none;  /* Removes underline */
-    color: #7678bf; /* Change color as needed */
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.header {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-start; /* Align text to the left */
-    gap: 15px; /* Adds some spacing between elements */
-}
-
-@media (max-width: 768px) {
-    .social-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .skills-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .contact-dropdown {
-        right: auto;
-        left: 10px;
-    }
+.view-cert:hover {
+    color: #bbb;  /* Slightly darker on hover */
+    text-decoration: underline;  /* Underline on hover */
 }
