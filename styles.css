@@ -1,427 +1,301 @@
-/* Import Font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-
-/* General Styling */
-body { 
-    font-family: 'Inter', sans-serif;  /* Sets font */
-    background-color: #121212; /* Dark background */
-    color: #ffffff; /* White text */
-    margin: 0; 
-    padding: 20px; 
-    line-height: 1.7; /* Improves readability */
+/* =========================
+   GLOBAL THEME VARIABLES
+========================= */
+:root {
+    --bg-main: #0b0b0b;          /* Near-true black */
+    --bg-card: #141414;          /* Dark grey cards */
+    --bg-card-hover: #1c1c1c;    /* Slight hover lift */
+    --accent: #7678b7;           /* Keep accent */
+    --accent-soft: rgba(118, 120, 183, 0.18);
+    --text-main: #ffffff;
+    --text-muted: #c2c2c2;
+    --border-soft: rgba(255, 255, 255, 0.08);
 }
 
-html {
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+
+/* =========================
+   BASE STYLES
+========================= */
+* {
+    box-sizing: border-box;
 }
 
-/* Container */
-.container { 
-    width: 85%; 
-    max-width: 1100px;
-    margin: auto; /* Centers the content */
-    padding: 20px;
-}
-
-/* Scroll Progress Bar */
-.scroll-progress {
-    position: fixed;
-    top: 0;
-    right: 0; /* Aligns with the right edge */
-    width: 7px;
-    height: 0%; /* Starts empty */
-    background: #7678b7; /* Progress bar color */
-    z-index: 9999;
-    transition: height 0.2s ease-out;
-    border-radius: 10px; /* Smooth edges */
-}
-
-/* Header Section */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #333; /* Adds a separator */
-}
-
-/* Contact Button */
-.contact-btn {
-    background-color: #444;
-    color: white;
-    font-weight: bold;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.contact-btn:hover {
-    background-color: #5a5c99;
-}
-
-/* Headings */
-h1 { 
-    margin: 0; 
-    font-size: 2.4em; 
-}
-
-h2 { 
-    color: #ffffff; 
-    margin-bottom: 15px; 
-    font-size: 1.8em;
-    border-left: 5px solid #ffffff;
-    padding-left: 12px;
-}
-
-/* Subtitle Styling */
-.subtitle {
-    margin-top: 5px;
-    font-size: 1.2em;
-    color: #bbb;
-}
-
-/* Back Button */
-.back-btn {
-    color: #7678b7;
-    text-decoration: none; /* Removes underline */
-    font-weight: bold;
-}
-
-.back-btn:hover {
-    text-decoration: underline;
-}
-
-/* Tagline */
-.tagline { 
-    font-size: 1.2em; 
-    color: #bbb; 
-    margin-top: 5px;
-}
-
-/* Social Links */
-.social-links {
-    display: flex;
-    gap: 20px;
-}
-
-.social-links a {
-    font-weight: bold;
-    font-size: 1.1em;
-    color: #7678b7;
-    text-decoration: none;
-    transition: color 0.3s, transform 0.2s;
-}
-
-.social-links a:hover { 
-    color: #999; 
-    transform: scale(1.1);
-}
-
-/* Section Styling */
-.section { 
-    margin-bottom: 50px; 
-    padding: 25px; 
-    background-color: #1e1e1e; /* Dark background */
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
-}
-
-/* Lists */
-.section ul {
-    padding-left: 20px;
-}
-
-.section ul li {
-    margin-bottom: 8px;
-}
-
-/* Projects */
-.projects a {
-    color: #7678b7;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.projects a:hover {
-    color: #888;
-}
-
-/* Social Links Styling */
-.social-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    text-decoration: none;
-    color: #9a9caf;
-    font-weight: 600;
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-.social-links a i {
-    font-size: 18px; /* Adjust icon size */
-}
-
-.social-links a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffff !important;
-}
-
-/* Skills Section */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 20px;
-    padding: 20px;
-    background: #171728;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1s ease-in-out;
-}
-
-.skill-category {
-    background: #252541;
-    padding: 15px;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.skill-category:hover {
-    transform: translateY(-5px);
-}
-
-/* Headings */
-h2 {
-    text-align:left;
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #bbb;
-    animation: slideIn 1s ease-in-out;
-}
-
-h3 {
-    color: #f8f9fa;
-    font-size: 20px;
-    margin-bottom: 5px;
-}
-
-p {
-    color: #dcdcdc;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideIn {
-    from { transform: translateY(-10px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-/* Email & Resume Links */
-.email-link, .resume-link {
-    color: #7678b7;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.email-link:hover, .resume-link:hover {
-    text-decoration: underline;
-}
-
-/* Contact Section */
-.contact p {
-    font-size: 1.1em;
-}
-
-/* WhatsApp Link */
-.whatsapp-link {
-    color: #7678b7;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.whatsapp-link:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .social-links {
-        margin-top: 10px;
-    }
-
-    .skills-list {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
-}
-
-/* Full-Screen Header */
-.full-screen {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: #121212;
-    color: #fff;
-}
-
-/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Content Animation */
-.content {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.7;
 }
 
-body.scrolled .content {
-    opacity: 1;
-    transform: translateY(0);
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
 }
 
-/* Scroll-down Indicator */
-.scroll-down {
-    position: absolute;
-    bottom: 20px;
-    font-size: 24px;
-    cursor: pointer;
-    animation: bounce 1.5s infinite;
+/* =========================
+   HEADER / HERO
+========================= */
+.header.full-screen {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(10px); }
-}
-
-/* Profile Image */
 .profile-img {
     width: 220px;
     height: 220px;
     border-radius: 50%;
     object-fit: cover;
-    display: block;
-    margin: 0 auto 15px;
-    border: 3px solid #7678bf;
+    margin-bottom: 20px;
+    box-shadow:
+        0 0 0 4px var(--accent-soft),
+        0 25px 50px rgba(0, 0, 0, 0.65);
 }
 
-/* Back to Top Button */
+h1 {
+    font-size: 2.6em;
+    margin: 10px 0;
+}
+
+.tagline {
+    font-size: 1.2em;
+    color: var(--text-muted);
+}
+
+.location {
+    margin-top: 6px;
+    color: var(--text-muted);
+}
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: var(--accent-soft);
+    transition: all 0.25s ease;
+}
+
+.social-links a:hover {
+    background: rgba(118, 120, 183, 0.25);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   SECTIONS (CORE UPGRADE)
+========================= */
+.section {
+    margin-bottom: 50px;
+    padding: 32px;
+    background: linear-gradient(145deg, var(--bg-card), #141622);
+    border-radius: 14px;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.55),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h2 {
+    font-size: 1.9em;
+    margin-bottom: 18px;
+    padding-left: 14px;
+    border-left: 4px solid var(--accent);
+    color: var(--text-main);
+}
+
+h3 {
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+/* Optional typography refinement */
+h1, h2 {
+    letter-spacing: -0.02em;
+}
+
+/* =========================
+   TEXT
+========================= */
+p {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin: 0 0 12px;
+}
+
+ul {
+    padding-left: 18px;
+}
+
+li {
+    margin-bottom: 10px;
+    color: var(--text-muted);
+}
+
+/* =========================
+   SKILLS GRID
+========================= */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.skill-category {
+    background: linear-gradient(160deg, #1f2333, #1a1d2b);
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid var(--border-soft);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   BUTTONS / LINKS
+========================= */
+.projects-btn,
+.resume-link,
+.view-cert {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.projects-btn:hover,
+.resume-link:hover,
+.view-cert:hover {
+    background: rgba(118, 120, 183, 0.25);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   CONTACT
+========================= */
+.email-link,
+.phone-link {
+    color: var(--accent);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.copy-message {
+    margin-left: 6px;
+    color: var(--accent);
+    font-size: 14px;
+}
+
+/* =========================
+   SCROLL PROGRESS BAR
+========================= */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 0%;
+    background: var(--accent);
+    z-index: 9999;
+    transition: height 0.2s ease;
+}
+
+/* =========================
+   BACK TO TOP
+========================= */
 #backToTop {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: none;
-    width: 50px;
-    height: 50px;
-    background-color: #333;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #2a2d3d;
     color: white;
     border: none;
-    border-radius: 50%;
-    font-size: 24px;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    display: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
 #backToTop:hover {
-    background-color: #555;
-    transform: scale(1.1);
+    background: #3a3d55;
 }
 
-/* Resume Link Styling */
-.resume-link {
-    font-weight: bold;
-    color: #7678bf; /* Adjust to match your theme */
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+}
+h1, h2 {
+    letter-spacing: -0.02em;
 }
 
-.resume-link:hover {
-    color: #888; /* Slightly darker shade on hover */
-    text-decoration: none;
-}
-.email-link {
-    cursor: pointer;
-    position: relative;
+h1 {
+    font-weight: 700;
 }
 
-/* Styling for email and phone number links */
-.email-link, .phone-link {
-    cursor: pointer;
-    color: #7678b7;  /* Matches theme */
-    font-weight: bold;
-    transition: color 0.3s ease;
-    position: relative;
+h2 {
+    font-weight: 600;
 }
 
-/* Hover effect for both email and phone */
-.email-link:hover, .phone-link:hover {
-    color: #bbb;  /* Changes color on hover */
-    text-decoration: none;  /* Removes underline */
+h3 {
+    font-weight: 600;
 }
 
-/* Tooltip effect for email and phone */
-.email-link::after, .phone-link::after {
-    content: "Click to copy";
-    position: absolute;
-    background-color: #444;
-    color: white;
-    padding: 5px;
-    font-size: 12px;
-    border-radius: 5px;
-    white-space: nowrap;
-    bottom: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    pointer-events: none;
+p, li {
+    font-weight: 400;
 }
 
-/* Show tooltip on hover */
-.email-link:hover::after, .phone-link:hover::after {
-    opacity: 1;
-}
-
-/* Copied confirmation message */
-.copy-message {
-    font-size: 14px;
-    color: #7678b7;
-    display: none;
-    margin-left: 5px;
-}
-
-.view-cert {
-    color: #7678b7;  /* Sets the text color */
-    text-decoration: none;  /* Removes underline */
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.view-cert:hover {
-    color: #bbb;  /* Slightly darker on hover */
-    text-decoration: underline;  /* Underline on hover */
+.tagline,
+.location {
+    font-weight: 400;
 }
